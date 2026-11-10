@@ -1259,3 +1259,23 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 .service-area-inner .btn {
   margin-top: 1.25rem;
 }
+
+/* About visual */
+.about-visual {
+  margin: 0 0 2.5rem;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--stone);
+}
+
+.about-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item.g4 .gallery-ph--portrait {
+  aspect-ratio: 3 / 4;
+}
