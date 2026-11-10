@@ -133,7 +133,7 @@
     }
   }
 
-  // Inquiry form — opens an email draft to the business inbox
+  // Inquiry form — sends the inquiry to the business inbox
   var PLACEHOLDER_EMAIL = "info@rubyelizabethevents.com";
   var form = document.getElementById("inquiry-form");
   var statusEl = document.getElementById("form-status");
@@ -165,30 +165,41 @@
         return;
       }
 
-      var subject = encodeURIComponent(
-        "Ruby Elizabeth Events Inquiry — " + name
-      );
-      var body = encodeURIComponent(
-        [
-          "Name: " + name,
-          "Email: " + email,
-          "Phone: " + (phone || "(not provided)"),
-          "Event date: " + (eventDate || "(not provided)"),
-          "Service interest: " + (service || "(not specified)"),
-          "",
-          "Message:",
-          message,
-        ].join("\n")
-      );
+      var btn = form.querySelector("button[type=submit], button:not([type])");
+      if (btn) { btn.disabled = true; }
+      showStatus("Sending your inquiry\u2026", false);
 
-      // Open mailto as temporary wiring
-      window.location.href =
-        "mailto:" + PLACEHOLDER_EMAIL + "?subject=" + subject + "&body=" + body;
+      var payload = {
+        name: name,
+        email: email,
+        phone: phone || "(not provided)",
+        "event date": eventDate || "(not provided)",
+        "service interest": service || "(not specified)",
+        message: message,
+        _subject: "Ruby Elizabeth Events Inquiry \u2014 " + name,
+        _replyto: email,
+        _template: "table",
+        _captcha: "false"
+      };
 
-      showStatus(
-        "Opening your email client with a drafted inquiry to info@rubyelizabethevents.com. If nothing opens, email that address directly.",
-        false
-      );
+      fetch("https://formsubmit.co/ajax/" + PLACEHOLDER_EMAIL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload)
+      })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, data: d }; }); })
+        .then(function (res) {
+          if (res.ok && String(res.data.success) !== "false") {
+            form.reset();
+            showStatus("Thank you! Your inquiry has been sent. We will be in touch soon.", false);
+          } else {
+            throw new Error("send failed");
+          }
+        })
+        .catch(function () {
+          showStatus("Sorry, something went wrong. Please email us directly at info@rubyelizabethevents.com.", true);
+        })
+        .then(function () { if (btn) { btn.disabled = false; } });
     });
   }
 })();

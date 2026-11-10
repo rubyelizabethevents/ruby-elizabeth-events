@@ -785,6 +785,14 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   grid-column: span 4;
 }
 
+.gallery-item.g7 {
+  grid-column: span 5;
+}
+
+.gallery-item.g8 {
+  grid-column: span 7;
+}
+
 .gallery-ph {
   aspect-ratio: 5 / 4;
   position: relative;
@@ -1116,7 +1124,9 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   .gallery-item.g3,
   .gallery-item.g4,
   .gallery-item.g5,
-  .gallery-item.g6 {
+  .gallery-item.g6,
+  .gallery-item.g7,
+  .gallery-item.g8 {
     grid-column: span 6;
   }
 
@@ -1181,7 +1191,9 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   .gallery-item.g3,
   .gallery-item.g4,
   .gallery-item.g5,
-  .gallery-item.g6 {
+  .gallery-item.g6,
+  .gallery-item.g7,
+  .gallery-item.g8 {
     grid-column: span 12;
   }
 
