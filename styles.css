@@ -772,21 +772,21 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 
 .gallery-item.g1,
 .gallery-item.g4,
-.gallery-item.g7,
-.gallery-item.g13 {
+.gallery-item.g13,
+.gallery-item.g11 {
   grid-column: span 5;
 }
 
 .gallery-item.g2,
-.gallery-item.g5,
 .gallery-item.g8,
+.gallery-item.g9,
 .gallery-item.g14 {
   grid-column: span 3;
 }
 
 .gallery-item.g3,
-.gallery-item.g6,
-.gallery-item.g9,
+.gallery-item.g7,
+.gallery-item.g12,
 .gallery-item.g15 {
   grid-column: span 4;
 }
@@ -799,16 +799,8 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   aspect-ratio: 1600 / 403;
 }
 
-.gallery-item.g11 {
-  grid-column: span 7;
-}
-
 .gallery-item.g11 .gallery-ph {
   aspect-ratio: 1264 / 1476;
-}
-
-.gallery-item.g12 {
-  grid-column: span 5;
 }
 
 .gallery-ph {
