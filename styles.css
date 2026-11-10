@@ -1239,3 +1239,23 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
     padding-inline: 1rem;
   }
 }
+
+/* Service area */
+.service-area {
+  background: var(--ivory);
+  text-align: center;
+}
+
+.service-area-inner {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.service-area-inner p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-area-inner .btn {
+  margin-top: 1.25rem;
+}

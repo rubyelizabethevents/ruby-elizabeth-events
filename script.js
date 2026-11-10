@@ -153,6 +153,7 @@
       var email = (form.elements.namedItem("email") || {}).value || "";
       var phone = (form.elements.namedItem("phone") || {}).value || "";
       var eventDate = (form.elements.namedItem("event-date") || {}).value || "";
+      var venue = (form.elements.namedItem("venue") || {}).value || "";
       var service = (form.elements.namedItem("service") || {}).value || "";
       var message = (form.elements.namedItem("message") || {}).value || "";
 
@@ -174,6 +175,7 @@
         email: email,
         phone: phone || "(not provided)",
         "event date": eventDate || "(not provided)",
+        "venue / location": String(venue).trim() || "(not provided)",
         "service interest": service || "(not specified)",
         message: message,
         _subject: "Ruby Elizabeth Events Inquiry \u2014 " + name,
