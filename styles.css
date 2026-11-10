@@ -795,6 +795,11 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   grid-column: span 12;
 }
 
+.gallery-item.g16,
+.gallery-item.g17 {
+  grid-column: span 6;
+}
+
 .gallery-item.g10 .gallery-ph {
   aspect-ratio: 1600 / 403;
 }
@@ -1142,7 +1147,9 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   .gallery-item.g12,
   .gallery-item.g13,
   .gallery-item.g14,
-  .gallery-item.g15 {
+  .gallery-item.g15,
+  .gallery-item.g16,
+  .gallery-item.g17 {
     grid-column: span 6;
   }
 
@@ -1220,7 +1227,9 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   .gallery-item.g12,
   .gallery-item.g13,
   .gallery-item.g14,
-  .gallery-item.g15 {
+  .gallery-item.g15,
+  .gallery-item.g16,
+  .gallery-item.g17 {
     grid-column: span 12;
   }
 
