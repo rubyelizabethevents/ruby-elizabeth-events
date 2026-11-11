@@ -1,5 +1,5 @@
 /* Ruby Elizabeth Events — Southern, exclusive, high-end
-   Palette inspired by Gracemore Estate: ivory, sage olive, charcoal */
+   Palette: ivory, sage olive, charcoal */
 
 :root {
   --ivory: #fffcf9;
@@ -133,7 +133,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   color: var(--muted);
 }
 
-/* Full-width sage panels — ivory/cream text, gold accents (Gracemore greens) */
+/* Full-width sage panels — ivory/cream text, gold accents */
 .section--sage {
   background: var(--sage);
   color: var(--cream);
@@ -665,7 +665,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   font-size: 0.98rem;
 }
 
-/* Gracemore exclusive */
+/* Exclusive partnership */
 .gracemore {
   background: var(--sage);
 }
@@ -1093,6 +1093,182 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   color: var(--gold-soft);
 }
 
+
+/* Pricing */
+.pricing {
+  background: var(--warm-cream);
+}
+
+.pricing h2 {
+  color: var(--sage);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background: var(--ivory);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.75rem 2.15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card h3 {
+  margin-bottom: 1.15rem;
+}
+
+.pricing-lead {
+  margin: 0 0 1.15rem;
+}
+
+.pricing-tiers {
+  list-style: none;
+  margin: 0 0 1.35rem;
+  padding: 0;
+}
+
+.pricing-tiers li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(88, 91, 77, 0.12);
+  color: var(--charcoal);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+}
+
+.pricing-tiers li span:last-child {
+  font-weight: 500;
+  color: var(--sage);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.pricing-includes-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin: 0 0 0.6rem;
+}
+
+.pricing-note {
+  margin: 0 0 1.15rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.pricing-includes {
+  margin: 0 0 1.5rem;
+  padding: 0 0 0 1.15rem;
+  color: var(--muted);
+}
+
+.pricing-includes li {
+  margin: 0 0 0.4rem;
+}
+
+.pricing-includes li:last-child {
+  margin-bottom: 0;
+}
+
+.pricing-special {
+  margin-top: auto;
+  padding: 1.15rem 1.2rem 1.2rem;
+  background: rgba(168, 151, 106, 0.12);
+  border: 1px solid var(--gold);
+  border-left-width: 3px;
+}
+
+.pricing-special .eyebrow {
+  color: var(--sage);
+  margin-bottom: 0.45rem;
+}
+
+.pricing-special p:last-child {
+  margin: 0;
+  color: var(--charcoal);
+}
+
+.pricing-availability {
+  margin: auto 0 0;
+  padding: 0.9rem 1rem;
+  background: var(--cream);
+  border-left: 2px solid var(--olive);
+  color: var(--charcoal);
+  font-size: 0.95rem;
+}
+
+.pricing-card--quote p {
+  margin: 0 0 1.15rem;
+}
+
+.pricing-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--sage);
+  margin: auto 0 1.25rem !important;
+}
+
+.pricing-card--quote .btn {
+  align-self: flex-start;
+}
+
+.pricing-bundle {
+  text-align: center;
+  margin: 2.25rem 0 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--sage);
+}
+
+.pricing-footer {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.pricing-delivery {
+  max-width: 40rem;
+  margin: 0 auto 1.75rem;
+}
+
+.pricing-delivery ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1.75rem;
+}
+
+.pricing-delivery li {
+  color: var(--charcoal);
+}
+
+.pricing-licensed {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin: 0 0 1.5rem;
+}
+
 /* Reveal animations */
 .reveal {
   opacity: 0;
@@ -1189,6 +1365,14 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pricing-card--booth {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1263,6 +1447,23 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
   }
 
   .inquiry-form .btn {
+    width: 100%;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card--booth {
+    grid-column: auto;
+  }
+
+  .pricing-delivery ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .pricing-card--quote .btn {
     width: 100%;
   }
 }
